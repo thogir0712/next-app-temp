@@ -6,7 +6,6 @@ export interface IAuthButton extends React.ComponentPropsWithoutRef<'button'> {}
 
 const AuthButton: React.FC<IAuthButton> = ({ className, ...buttonProps }) => {
   const { authenticated, login, logOut } = useContext(AuthContext);
-
   return (
     <button
       onClick={authenticated ? logOut : login}
